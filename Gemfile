@@ -18,8 +18,15 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
 gem "puma"
-gem 'delayed_job_active_record'
+gem "daemons"
+gem "quiet_assets"
+gem "delayed_job", github: "collectiveidea/delayed_job"
+gem "delayed_job_active_record", github: "antekpiechnik/delayed_job_active_record"
 gem "haml-rails"
+gem "less-rails" 
+gem 'twitter-bootstrap-rails', github: "seyhunak/twitter-bootstrap-rails"
+gem "simple_form"
+gem "faker"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 

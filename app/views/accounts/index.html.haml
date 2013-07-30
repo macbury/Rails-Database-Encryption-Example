@@ -1,0 +1,22 @@
+.row
+  .span12
+    %h3 My Accounts
+
+    %table.table
+      %tr
+        %th Name
+        %th Password
+        %th
+
+      - @accounts.each do |account|
+        %tr
+          %td= link_to account.name, edit_account_path(account)
+          %td= account.password
+          %td
+            = link_to 'Sync Friends', sync_account_path(account), class: "btn btn-mini"
+            = link_to 'Edit', edit_account_path(account), class: "btn btn-mini"
+            = link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-mini"
+
+    %br
+
+    = link_to 'New Account', new_account_path, class: "btn btn-primary"
