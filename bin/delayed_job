@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+ENV['IS_DELAYED_JOB'] = "true"
+
 require File.expand_path(File.join(File.dirname(__FILE__), '..', 'config', 'environment'))
 require 'delayed/command'
 

@@ -1,4 +1,5 @@
 require "fake_api"
+
 class ApiJob < Struct.new(:account_id)
   def perform
     @account = Account.find(account_id)
