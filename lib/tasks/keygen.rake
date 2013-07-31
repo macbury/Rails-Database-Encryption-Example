@@ -12,3 +12,4 @@ def store_key(path, content)
   file.write(content)
   file.close
 end
+
